@@ -66,9 +66,6 @@ RUN addgroup -g 1000 mvc && adduser -G mvc -g mvc -s /bin/sh -D mvc
 USER mvc
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-
-RUN git config --global user.email "hrst.stoyanov@gmail.com" \ 
-    && git config --global user.name "Hristo Stoyanov"
  
 WORKDIR /var/www/html
  
